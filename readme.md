@@ -1,4 +1,4 @@
-#Exercice 1 PHP POO 
+<text-align-center>##Exercice 1 PHP POO 
 ## Geometrie
 
 ### Contenu de l'exo :
