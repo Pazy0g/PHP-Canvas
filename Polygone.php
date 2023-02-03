@@ -1,5 +1,5 @@
 <?php
-            //Enfant de "Figure"
+            // * Enfant de "Figure"
     class Polygone extends Figure{
         
         

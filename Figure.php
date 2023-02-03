@@ -2,19 +2,19 @@
 include_once "point.php";
     //Classe parent
 class Figure{
-            //Constantes
+            //* Constantes
         protected string $col;
         // protected float  $cox;
         // protected float $coy;
         protected Point $centre;
 
-            //Constructeur
+            // * Constructeur
     public function __construct (string $col='000000', Point $centre){
         $this->col = $col;
         $this->centre = $centre;
 
     }
-                //Méthodes
+                // * Méthodes
         public function __get ($pName){
             return $this->$pName;
 

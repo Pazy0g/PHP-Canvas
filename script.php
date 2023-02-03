@@ -17,6 +17,13 @@ include_once 'Polygone.php';
 
 //Création de l'objet figure tirant ses propriétés de la classe parent
 //$centre = new Point(50,50);
+
+
+ // ? don't seems to work properly something to fix around here or in point.php
+
+
+
+
 $figure1 = new Figure("01ffe8", new Point(502, 062));
 echo  var_dump($figure1);
 //Affichage des propriétés par défauts des Attributs
