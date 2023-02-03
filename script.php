@@ -10,25 +10,28 @@
 
 
 <?php 
-    include 'Figure.php';
-    require 'Cercle.php';
-    require 'Polygone.php';
+include_once 'point.php';
+include_once 'Figure.php';
+include_once 'Cercle.php';
+include_once 'Polygone.php';
 
-        //Création de l'objet figure tirant ses propriétés de la classe parent
-    $figure1 = new Figure();
+//Création de l'objet figure tirant ses propriétés de la classe parent
+//$centre = new Point(50,50);
+$figure1 = new Figure("01ffe8", new Point(502, 062));
+echo  var_dump($figure1);
+//Affichage des propriétés par défauts des Attributs
+// Création de l'objet Cercle qui tient pour parent "Figure"
+// $cercle = new Cercle();
+// $cercle->displayProperties();
 
-            //Affichage des propriétés par défauts des Attributs
-   echo 'Coordonnée X par défaut : ' .$figure1->cox;
-   echo '<br> Coordonnée Y par défaut : ' .$figure1->coy;
-   echo '<br> Couleur par défaut : ' .$figure1->col . '<br>';
-    
 
-            // Création de l'objet Cercle qui tient pour parent "Figure"
-    $cercle = new Cercle();
-        $cercle->setColor("01ffe8");
-        $cercle->setPosition($newPositionX = [25,200], $newPositionY = [390,56]);
-    
-    var_dump($cercle);
+
+// //Changement des propriétés
+// $cercle->setColor("01ffe8");
+// $cercle->setPosition(25, 390);
+
+
+// print_r($cercle);
 
 
 ?>

@@ -1,17 +1,17 @@
 <?php
-
+include_once "point.php";
     //Classe parent
 class Figure{
             //Constantes
-        private string $col;
-        private  $cox;
-        private  $coy;
+        protected string $col;
+        // protected float  $cox;
+        // protected float $coy;
+        protected Point $centre;
 
             //Constructeur
-    public function __construct ($col='000000',$cox=150,$coy=150){
-        $this-> col = $col;
-        $this-> cox = $cox;
-        $this-> coy = $coy;
+    public function __construct (string $col='000000', Point $centre){
+        $this->col = $col;
+        $this->centre = $centre;
 
     }
                 //Méthodes
@@ -25,11 +25,10 @@ class Figure{
 
         }
 
-    public function setPosition($newPositionX,$newPositionY){
-        $this-> cox = $newPositionX;
-        $this-> coy = $newPositionY;
-
-    }
+    // public function setPosition($newPositionX,$newPositionY){
+    //     $this-> cox = $newPositionX;
+    //     $this-> coy = $newPositionY;
+    // }
 }
 
 
