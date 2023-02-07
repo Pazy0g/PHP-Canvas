@@ -1,34 +1,39 @@
 <?php
-include_once "point.php";
-    //Classe parent
-class Figure{
-            //* Constantes
-        protected string $col;
-        // protected float  $cox;
-        // protected float $coy;
-        protected Point $centre;
 
-            // * Constructeur
-    public function __construct (string $col='000000', Point $centre){
+//! Require point.php object class to replace the coordinates "x,y".
+//* Using require_once to load the class once.
+//? we need to make sure that it does exist and can be load before being able to use the "Figure" class. Else (fatal error).
+
+require_once "point.php";
+
+//! parent class
+
+class Figure
+{
+
+    //* Constants
+    protected string $col;
+    protected Point $centre;
+
+    // * Constructor
+    public function __construct(string $col = '000000', Point $centre = null)
+    {
         $this->col = $col;
         $this->centre = $centre;
-
     }
-                // * Méthodes
-        public function __get ($pName){
-            return $this->$pName;
 
-        }
+    //* Accessors
+    public function __get($pName)
+    {
+        return $this->$pName;
+    }
 
-        public function setColor($newColor){
-            $this-> col = $newColor;
+    // * setters
 
-        }
-
-    // public function setPosition($newPositionX,$newPositionY){
-    //     $this-> cox = $newPositionX;
-    //     $this-> coy = $newPositionY;
-    // }
+    public function __set($pName, $pValue)
+    {
+        $this->$pName = $pValue;
+    }
 }
 
 
