@@ -2,7 +2,7 @@
 //! Child of "Figure"
 class Cercle extends Figure
 {
-    //* Constants
+    //* Constants of the class.
     protected float $rayon;
 
     //* Constructor
@@ -12,11 +12,10 @@ class Cercle extends Figure
         $this->rayon = $rayon;
     }
 
-    // * accessors
-
+    // * Accessors
     public function getCenter()
     {
-        return $this->centre;
+        return $this->centre;        
     }
 
     public function getRadius()
@@ -24,7 +23,7 @@ class Cercle extends Figure
         return $this->rayon;
     }
 
-    //* setters
+    //* Setters
     public function move($dx, $dy)
     {
         $this->centre->move($dx, $dy);
@@ -32,7 +31,7 @@ class Cercle extends Figure
 
     public function rotate(Point $cr, float $angle)
     {
-        $this->centre->rotate($cr,$angle);
+        $this->centre->rotate($cr, $angle);
     }
 }
 ?>

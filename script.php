@@ -25,15 +25,19 @@
     $width = 500;
     $height = 500;
     $canvas = new Canvas($width, $height);
-
+    
     //* Create a circle with radius of 50 and a center of (100,100)
 
     $cercle1 = new Cercle('EEEEEE',200,  new Point(100, 100));
     // Create a circle with radius of 50 and a center of (35,68)
-    $cercle2 = new Cercle('0000FF',50,  new Point(35, 68));
+    $cercle2 = new Cercle('0000FF',95,  new Point(35, 68));
     $cercle3 = new Cercle('FFFFFF',95,  new Point(200, 134));
     $cercle4 = new Cercle('FFFFFF',95,  new Point(200, 134)); 
-    $cercle4->rotate(new Point(0, 180),-50);
+    $cercle4->rotate(new Point(95, 360),-75);
+    $cercle5 = new Cercle('FFFFFF',95,  new Point(210, 144));
+    $cercle5->rotate(new Point(80, 310),-32);
+
+
 
     //* Add the cercles to the canvas
 
@@ -41,10 +45,11 @@
     $canvas->drawCercle($cercle2);
     $canvas->drawCercle($cercle3);
     $canvas->drawCercle($cercle4);
+    $canvas->drawCercle($cercle5);
+    
 
     //! generate and save the image into the image folder
     $canvas->output();
-
 
     ?>
 
