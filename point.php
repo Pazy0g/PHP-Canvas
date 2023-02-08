@@ -1,6 +1,5 @@
 <?php
 
-////  problem with the following code
 //! Point is a replacement for "x" and "y" coordinates.
 //* More useful code for the Polygone object.
 class Point
